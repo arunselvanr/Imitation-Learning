@@ -229,12 +229,13 @@ X = np.array(X.values)
 Y = np.array(Y.values)
 
 # Build a model a n_h-dimensional hidden layer
-parameters = nn_model(X, Y, n_h = 5, num_iterations = 15001, print_cost = True)
+parameters = nn_model(X, Y, n_h = 5, num_iterations = 10001, print_cost = True)
 
 # Print accuracy
 predictions = predict(parameters, X)
 print("Accuracy: {} %".format(float(np.dot(Y, predictions.T) + np.dot(1-Y, 1-predictions.T))/float(Y.size)*100))
 
+"""
 N = len(predictions.T)
 
 #
@@ -246,3 +247,4 @@ for idx in range(N):
     print(X[0,idx], X[1,idx], predictions[0,idx], myfile)
 
 myfile.close()
+"""

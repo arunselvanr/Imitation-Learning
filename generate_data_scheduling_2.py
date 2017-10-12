@@ -9,7 +9,7 @@ import sklearn.datasets
 import sklearn.linear_model
 
 # number of sampling point
-N = 500
+N = 250
 
 # system model
 F1 = np.array([[1.1193, 0.1978], [0.2916, 1.2877]])
